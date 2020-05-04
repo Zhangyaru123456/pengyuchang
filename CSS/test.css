@@ -492,3 +492,10 @@ body/*消除整个网页得内外边距*/
   margin: 0;
   padding: 0;
 }
+@media screen and (min-width: 480px) 
+{
+  body 
+  {
+      background-color: rgb(250, 233, 212);
+  }
+}
