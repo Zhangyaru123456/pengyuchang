@@ -60,11 +60,11 @@
 }
 .dropdown
 { 
-margin: 0px auto;/* 下拉菜单边框颜色*/
-position: absolute;
-left: -999em;/*让下拉框左远离当前布局*/
-text-align: left;
-width: 140px;
+  margin: 0px auto;/* 下拉菜单边框颜色*/
+  position: absolute;
+  left: -999em;/*让下拉框左远离当前布局*/
+  text-align: left;
+  width: 140px;
 }
 #menu li:hover .dropdown 
 {
@@ -134,7 +134,7 @@ span:hover
 }
 .column.middle /* 中间宽度 */
 {
-  width: 80%;
+  width: 75%;
 }
 .row:after /* 列后面清除浮动 */
 {
@@ -143,7 +143,6 @@ span:hover
   clear: both;
 }
    
-
 
   
   .fakeimg /* 图像 */
@@ -185,25 +184,6 @@ span:hover
     margin-top: 20px;
   }
    
-  /* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
-  @media screen and (max-width: 800px) 
-  {
-    .leftcolumn, .rightcolumn 
-    {   
-      width: 100%;
-      padding: 0;
-    }
-  }
-   
-  /* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
-  @media screen and (max-width: 400px) 
-  {
-    .topnav a 
-    {
-      float: none;
-      width: 100%;
-    }
-  }
 body/*背景颜色*/
 {
     background-color: seashell;
@@ -211,9 +191,9 @@ body/*背景颜色*/
 .information/*ta的基本信息*/
 {
     text-align: center;
-    position: absolute;
-    right: 500px;
-    width: 600px;
+    position: relative;
+    right: auto;
+    width: 100%;
     border: 3px solid rgb(124, 92, 111);
     padding: 10px;
 }
@@ -289,7 +269,8 @@ ul.a
  
 .cata/*目录*/
 {
-  margin-left: 100px;
+  margin: auto;
+  font-size: larger;
 }
 
 .frame /*框架*/
@@ -328,20 +309,20 @@ div1.desc
 
 div2.img 
 {
-  margin: 30px;
+  margin: auto;
   border: 0px solid #ccc;
   margin: auto;
-  width: 300px;
+  width: auto;
 }
 
 div2.img:hover 
 {
-  border: 1px solid #777;
+  border: 0px solid #777;
 }
 
 div2.img img 
 {
-  width: 20%;
+  width: 100%;
   height: auto;
 }
 
@@ -354,16 +335,15 @@ div2.desc
 
 div3.img 
 {
-  margin: 30px;
-  float: left;
+  margin: auto;
   border: 0px solid #ccc;
   margin: auto;
-  width: 300px;
+  width: auto;
 }
 
 div3.img:hover 
 {
-  border: 1px solid #777;
+  border: 0px solid #777;
 }
 
 div3.img img
@@ -378,70 +358,36 @@ div3.desc
   text-align: center;
 }
 
+div4.img 
+{
+  margin: 200px;
+  border: 0px solid #ccc;
+  margin: auto;
+  width: auto;
+}
+
+div4.img:hover 
+{
+  border: 0px solid #777;
+}
+
+div4.img img
+{
+  width: 100%;
+  height: 250px;
+}
+
+div4.desc 
+{
+  padding: 25px;
+  text-align: center;
+}
+
 .responsive 
 {
-  padding: 0 6px;
-  float: left;
-  width: 25%;
+  padding: 10 100px;
+  width: 100%;
 }
-/*响应式*/
-@media only screen and (max-width: 700px)
-{
-  .responsive 
-  {
-      width: 49.99999%;
-      margin: 6px 0;
-  }
-}
-
-@media only screen and (max-width: 500px)
-{
-  .responsive 
-  {
-      width: 100%;
-  }
-}
-
-/*整菜单*/
-/*
-.dropbtn {
-  background-color: rgba(188, 189, 188, 0);
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-.dropdown {
-  position: relative;
-  z-index: 200;
-  display: inline-block;
-}
-.dropdown-content {
-  right: 0;
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.dropdown:hover .dropbtn {
-  background-color: #929692e8;
-}*/
-
 
 
 /*加注释 ，鼠标滑过  [2][11]*/
@@ -456,7 +402,7 @@ div3.desc
 {
   visibility: hidden;
   width: 120px;
-  background-color: black;
+  background-color: rgb(36, 110, 248);
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -497,5 +443,47 @@ body/*消除整个网页得内外边距*/
   body 
   {
       background-color: rgb(250, 233, 212);
+  }
+}
+/* 响应式布局 - 宽度小于600px时设置上下布局 */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+/* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
+@media screen and (max-width: 1200px) 
+{
+  .leftcolumn, .rightcolumn 
+  {   
+    width: 100%;
+    padding: 0;
+  }
+}
+ 
+/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+@media screen and (max-width: 400px) 
+{
+  .topnav a 
+  {
+    float: none;
+    width: 100%;
+  }
+}
+/*响应式*/
+@media only screen and (max-width: 700px)
+{
+  .responsive 
+  {
+      width: 100%;
+      margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px)
+{
+  .responsive, .information
+  {
+      width: 100%;
   }
 }
