@@ -94,25 +94,6 @@
   text-align:left;
   width:100px;
 }
-/*个人中心字体设计，实际上及时摆设*/
-span
-{
-  float: right;
-  color: white;
-  width: 100px;
-  line-height:45px;
-  text-align: center;
-  position:relative;
-  margin-right: 300px;
-  border:none;
-  display: block;
-}
-span:hover
-{
-  background-color: white;
-  color: hsl(240, 76%, 48%);
-}
-
 
 
 .video/* 视频 */
