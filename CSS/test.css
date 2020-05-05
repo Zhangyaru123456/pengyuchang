@@ -312,7 +312,7 @@ div2.desc
   padding: 25px;
   text-align: center;
 }
-/*电视剧电影的图片*/
+/*电视剧的图片*/
 
 div3.img 
 {
@@ -338,7 +338,7 @@ div3.desc
   padding: 25px;
   text-align: center;
 }
-
+/*电影的图片*/
 div4.img 
 {
   margin: 200px;
@@ -354,8 +354,8 @@ div4.img:hover
 
 div4.img img
 {
-  width: 100%;
-  height: 250px;
+  width: 100px;
+  height: 150px;
 }
 
 div4.desc 
